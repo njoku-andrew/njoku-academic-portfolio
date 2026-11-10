@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f3ee" />
+    <title>Njoku Andrew — Academic Planner</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-pills" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a
+        ><a class="nav-link" href="about.html">About</a
+        ><a class="nav-link" href="projects.html">Projects</a
+        ><a class="nav-link active" href="planner.html" aria-current="page"
+          >Planner</a
+        ><a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main class="page-shell planner-page">
+      <section class="page-heading split-heading">
+        <div>
+          <p class="eyebrow">
+            <span class="accent-mark">✳</span> PERSONAL SYSTEM
+          </p>
+          <h1>Make room<br /><span>for focus.</span></h1>
+        </div>
+        <p class="heading-side">
+          A small space for keeping track of coursework, study sessions and the
+          things to do next.
+        </p>
+      </section>
+      <section class="planner-layout">
+        <div class="planner-summary">
+          <div class="today-card">
+            <span class="today-label">YOUR STUDY DESK</span
+            ><strong id="today-date">TODAY</strong>
+            <div class="summary-count">
+              <b id="remaining-count">0</b><span>tasks<br />to go</span>
+            </div>
+            <div class="progress-track"><span id="progress-fill"></span></div>
+            <small id="progress-label">Nothing planned yet</small>
+          </div>
+          <div class="planner-tip">
+            <span>✳</span>
+            <p>You can always add another task when you need it.</p>
+          </div>
+        </div>
+        <div class="planner-board">
+          <div class="planner-board-head">
+            <div>
+              <span class="section-kicker">YOUR LIST</span>
+              <h2>Study tasks</h2>
+            </div>
+            <span class="task-total" id="task-total">0 ITEMS</span>
+          </div>
+          <form class="task-form" id="task-form">
+            <label class="sr-only" for="task-input">New task</label>
+            <input
+              id="task-input"
+              name="task"
+              type="text"
+              maxlength="100"
+              placeholder="Add a task or reminder..."
+              autocomplete="off"
+              required
+            />
+            <button type="submit" aria-label="Add task">+</button>
+          </form>
+          <div class="task-filters" role="group" aria-label="Filter tasks">
+            <button
+              class="filter-button active"
+              type="button"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              All
+            </button>
+            <button
+              class="filter-button"
+              type="button"
+              data-filter="active"
+              aria-pressed="false"
+            >
+              To do
+            </button>
+            <button
+              class="filter-button"
+              type="button"
+              data-filter="completed"
+              aria-pressed="false"
+            >
+              Completed
+            </button>
+          </div>
+          <ul class="task-list" id="task-list" aria-live="polite"></ul>
+          <div class="planner-empty" id="planner-empty">
+            <span class="empty-star">✳</span><strong>No tasks here yet.</strong>
+            <p>Add a study task above and it will appear in this list.</p>
+          </div>
+          <div class="planner-foot">
+            <span id="planner-storage">SAVED IN THIS BROWSER</span
+            ><button id="clear-completed" type="button">Clear completed</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>© 2026 NJOKU ANDREW</span><span>PLANNER / PERSONAL USE</span
+      ><a href="contact.html">GET IN TOUCH ↗</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
